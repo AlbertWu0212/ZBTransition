@@ -9,10 +9,12 @@
 #import "MainTableViewController.h"
 #import "CrossDissolveFirstViewController.h"
 #import "SwipeFirstViewController.h"
-#import "MainNavigationController.h"
 #import "CustomPresentationFirstViewController.h"
 
 static NSString * const CELL_IDENTIFIER = @"cell";
+static NSString * const KEY_TITLE       = @"title";
+static NSString * const KEY_SUBTITLE    = @"subTitle";
+static NSString * const KEY_CLASSNAME   = @"className";
 
 @interface MainTableViewController ()
 @property (nonatomic, strong) NSArray *dataSource;
@@ -35,16 +37,19 @@ static NSString * const CELL_IDENTIFIER = @"cell";
 - (void)setupDataSource
 {
     NSMutableArray *tempArray = [NSMutableArray array];
-    NSDictionary *dic1 = @{@"title":@"Cross Dissolve",
-                          @"subTitle":@"A cross dissolve transition"};
+    NSDictionary *dic1 = @{KEY_TITLE:@"Cross Dissolve",
+                           KEY_SUBTITLE:@"A cross dissolve transition",
+                           KEY_CLASSNAME:NSStringFromClass([CrossDissolveFirstViewController class])};
     [tempArray addObject:dic1];
     
-    NSDictionary *dic2 = @{@"title":@"Swipe",
-                           @"subTitle":@"An interactive transition"};
+    NSDictionary *dic2 = @{KEY_TITLE:@"Swipe",
+                           KEY_SUBTITLE:@"An interactive transition",
+                           KEY_CLASSNAME:NSStringFromClass([SwipeFirstViewController class])};
     [tempArray addObject:dic2];
     
-    NSDictionary *dic3 = @{@"title":@"Custom Presentation",
-                           @"subTitle":@"Using a presentation controller"};
+    NSDictionary *dic3 = @{KEY_TITLE:@"Custom Presentation",
+                           KEY_SUBTITLE:@"Using a presentation controller",
+                           KEY_CLASSNAME:NSStringFromClass([CustomPresentationFirstViewController class])};
     [tempArray addObject:dic3];
     
     self.dataSource = [NSArray arrayWithArray:tempArray];
@@ -75,8 +80,8 @@ static NSString * const CELL_IDENTIFIER = @"cell";
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL_IDENTIFIER];
     }
-    cell.textLabel.text = dic[@"title"];
-    cell.detailTextLabel.text = dic[@"subTitle"];
+    cell.textLabel.text = dic[KEY_TITLE];
+    cell.detailTextLabel.text = dic[KEY_SUBTITLE];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
@@ -94,34 +99,15 @@ static NSString * const CELL_IDENTIFIER = @"cell";
     NSInteger row = indexPath.row;
     NSDictionary *dic = [self.dataSource objectAtIndex:row];
     
-    if (row == 0) {
-        CrossDissolveFirstViewController *vc = [[CrossDissolveFirstViewController alloc] init];
-        vc.title = dic[@"title"];
-        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
-                                                                               style:UIBarButtonItemStylePlain
+    NSString *className = dic[KEY_CLASSNAME];
+    Class class = NSClassFromString(className);
+    if (class) {
+        UIViewController *vc = class.new;
+        vc.title = dic[KEY_TITLE];
+        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain
                                                                               target:self action:@selector(dismiss)];
-        MainNavigationController *navc = [[MainNavigationController alloc] initWithRootViewController:vc];
-        [self.navigationController presentViewController:navc animated:YES completion:nil];
-    }
-    
-    if (row == 1) {
-        SwipeFirstViewController *vc = [[SwipeFirstViewController alloc] init];
-        vc.title = dic[@"title"];
-        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
-                                                                               style:UIBarButtonItemStylePlain
-                                                                              target:self action:@selector(dismiss)];
-        MainNavigationController *navc = [[MainNavigationController alloc] initWithRootViewController:vc];
-        [self.navigationController presentViewController:navc animated:YES completion:nil];
-    }
-    
-    if (row == 2) {
-        CustomPresentationFirstViewController *vc = [[CustomPresentationFirstViewController alloc] init];
-        vc.title = dic[@"title"];
-        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
-                                                                               style:UIBarButtonItemStylePlain
-                                                                              target:self action:@selector(dismiss)];
-        MainNavigationController *navc = [[MainNavigationController alloc] initWithRootViewController:vc];
-        [self.navigationController presentViewController:navc animated:YES completion:nil];
+        UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self.navigationController presentViewController:navc animated:YES completion:NULL];
     }
 }
 
@@ -129,48 +115,5 @@ static NSString * const CELL_IDENTIFIER = @"cell";
 {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
