@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
-@interface CrossDissolveTransitionAnimator : NSObject
+@interface CrossDissolveTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

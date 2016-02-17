@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    
+    MainTableViewController *tvc = [[MainTableViewController alloc] init];
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:tvc];
+    self.window.rootViewController = navc;
+    
+    self.window.backgroundColor = [UIColor blackColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

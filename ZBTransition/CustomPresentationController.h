@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomPresentationController : UIPresentationController
+@interface CustomPresentationController : UIPresentationController <UIViewControllerTransitioningDelegate>
 
 @end

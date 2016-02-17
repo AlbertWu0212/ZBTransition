@@ -11,6 +11,23 @@
 		091C48881C72BF8900859CFC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C48871C72BF8900859CFC /* AppDelegate.m */; };
 		091C488A1C72BF8900859CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091C48891C72BF8900859CFC /* Assets.xcassets */; };
 		091C488D1C72BF8900859CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091C488B1C72BF8900859CFC /* LaunchScreen.storyboard */; };
+		091C489E1C72BFBB00859CFC /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C48961C72BFBB00859CFC /* ALView+PureLayout.m */; };
+		091C489F1C72BFBB00859CFC /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C48981C72BFBB00859CFC /* NSArray+PureLayout.m */; };
+		091C48A01C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C489A1C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.m */; };
+		091C48A31C72BFCE00859CFC /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C48A21C72BFCE00859CFC /* MainTableViewController.m */; };
+		091E77021C730A1400FFDF72 /* CustomPresentationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091E77011C730A1400FFDF72 /* CustomPresentationFirstViewController.m */; };
+		091E77051C730A2100FFDF72 /* CustomPresentationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091E77041C730A2100FFDF72 /* CustomPresentationSecondViewController.m */; };
+		091E77081C730A4300FFDF72 /* CustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091E77071C730A4300FFDF72 /* CustomPresentationController.m */; };
+		09495FDC1C741229001CAEC8 /* AAPLCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09495FDB1C741229001CAEC8 /* AAPLCustomPresentationController.m */; };
+		09BF0DEB1C72C37500CF5300 /* CrossDissolveFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DEA1C72C37500CF5300 /* CrossDissolveFirstViewController.m */; };
+		09BF0DEE1C72C38300CF5300 /* CrossDissolveSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DED1C72C38300CF5300 /* CrossDissolveSecondViewController.m */; };
+		09BF0DF11C72C50D00CF5300 /* MainNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DF01C72C50D00CF5300 /* MainNavigationController.m */; };
+		09BF0DF41C72C78B00CF5300 /* CrossDissolveTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DF31C72C78B00CF5300 /* CrossDissolveTransitionAnimator.m */; };
+		09BF0DF91C72CCC600CF5300 /* SwipeFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DF81C72CCC600CF5300 /* SwipeFirstViewController.m */; };
+		09BF0DFC1C72CCD500CF5300 /* SwipeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DFB1C72CCD500CF5300 /* SwipeSecondViewController.m */; };
+		09BF0DFF1C72CCE900CF5300 /* SwipeAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DFE1C72CCE900CF5300 /* SwipeAnimator.m */; };
+		09BF0E031C72CD8D00CF5300 /* SwipeTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0E021C72CD8D00CF5300 /* SwipeTransitionDelegate.m */; };
+		09BF0E061C72CDBD00CF5300 /* SwipeTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0E051C72CDBD00CF5300 /* SwipeTransitionInteractionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +38,43 @@
 		091C48891C72BF8900859CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		091C488C1C72BF8900859CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		091C488E1C72BF8900859CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		091C48951C72BFBB00859CFC /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		091C48961C72BFBB00859CFC /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		091C48971C72BFBB00859CFC /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		091C48981C72BFBB00859CFC /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		091C48991C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		091C489A1C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		091C489B1C72BFBB00859CFC /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		091C489C1C72BFBB00859CFC /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		091C489D1C72BFBB00859CFC /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		091C48A11C72BFCE00859CFC /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		091C48A21C72BFCE00859CFC /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		091E77001C730A1400FFDF72 /* CustomPresentationFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPresentationFirstViewController.h; sourceTree = "<group>"; };
+		091E77011C730A1400FFDF72 /* CustomPresentationFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPresentationFirstViewController.m; sourceTree = "<group>"; };
+		091E77031C730A2100FFDF72 /* CustomPresentationSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPresentationSecondViewController.h; sourceTree = "<group>"; };
+		091E77041C730A2100FFDF72 /* CustomPresentationSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPresentationSecondViewController.m; sourceTree = "<group>"; };
+		091E77061C730A4300FFDF72 /* CustomPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPresentationController.h; sourceTree = "<group>"; };
+		091E77071C730A4300FFDF72 /* CustomPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPresentationController.m; sourceTree = "<group>"; };
+		09495FDA1C741229001CAEC8 /* AAPLCustomPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCustomPresentationController.h; sourceTree = "<group>"; };
+		09495FDB1C741229001CAEC8 /* AAPLCustomPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLCustomPresentationController.m; sourceTree = "<group>"; };
+		09BF0DE91C72C37500CF5300 /* CrossDissolveFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossDissolveFirstViewController.h; sourceTree = "<group>"; };
+		09BF0DEA1C72C37500CF5300 /* CrossDissolveFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossDissolveFirstViewController.m; sourceTree = "<group>"; };
+		09BF0DEC1C72C38300CF5300 /* CrossDissolveSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossDissolveSecondViewController.h; sourceTree = "<group>"; };
+		09BF0DED1C72C38300CF5300 /* CrossDissolveSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossDissolveSecondViewController.m; sourceTree = "<group>"; };
+		09BF0DEF1C72C50D00CF5300 /* MainNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavigationController.h; sourceTree = "<group>"; };
+		09BF0DF01C72C50D00CF5300 /* MainNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavigationController.m; sourceTree = "<group>"; };
+		09BF0DF21C72C78B00CF5300 /* CrossDissolveTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossDissolveTransitionAnimator.h; sourceTree = "<group>"; };
+		09BF0DF31C72C78B00CF5300 /* CrossDissolveTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossDissolveTransitionAnimator.m; sourceTree = "<group>"; };
+		09BF0DF71C72CCC600CF5300 /* SwipeFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeFirstViewController.h; sourceTree = "<group>"; };
+		09BF0DF81C72CCC600CF5300 /* SwipeFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeFirstViewController.m; sourceTree = "<group>"; };
+		09BF0DFA1C72CCD500CF5300 /* SwipeSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeSecondViewController.h; sourceTree = "<group>"; };
+		09BF0DFB1C72CCD500CF5300 /* SwipeSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeSecondViewController.m; sourceTree = "<group>"; };
+		09BF0DFD1C72CCE900CF5300 /* SwipeAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeAnimator.h; sourceTree = "<group>"; };
+		09BF0DFE1C72CCE900CF5300 /* SwipeAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeAnimator.m; sourceTree = "<group>"; };
+		09BF0E011C72CD8D00CF5300 /* SwipeTransitionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeTransitionDelegate.h; sourceTree = "<group>"; };
+		09BF0E021C72CD8D00CF5300 /* SwipeTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeTransitionDelegate.m; sourceTree = "<group>"; };
+		09BF0E041C72CDBD00CF5300 /* SwipeTransitionInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeTransitionInteractionController.h; sourceTree = "<group>"; };
+		09BF0E051C72CDBD00CF5300 /* SwipeTransitionInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeTransitionInteractionController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +107,16 @@
 		091C48821C72BF8900859CFC /* ZBTransition */ = {
 			isa = PBXGroup;
 			children = (
+				091C48941C72BFAF00859CFC /* PureLayout */,
 				091C48861C72BF8900859CFC /* AppDelegate.h */,
 				091C48871C72BF8900859CFC /* AppDelegate.m */,
+				09BF0DEF1C72C50D00CF5300 /* MainNavigationController.h */,
+				09BF0DF01C72C50D00CF5300 /* MainNavigationController.m */,
+				091C48A11C72BFCE00859CFC /* MainTableViewController.h */,
+				091C48A21C72BFCE00859CFC /* MainTableViewController.m */,
+				091E76FC1C7309C200FFDF72 /* Custom Presentation */,
+				09BF0E001C72CCF000CF5300 /* Swipe */,
+				09BF0DF51C72CB6B00CF5300 /* CrossDissolve */,
 				091C48891C72BF8900859CFC /* Assets.xcassets */,
 				091C488B1C72BF8900859CFC /* LaunchScreen.storyboard */,
 				091C488E1C72BF8900859CFC /* Info.plist */,
@@ -69,6 +131,67 @@
 				091C48841C72BF8900859CFC /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		091C48941C72BFAF00859CFC /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				091C48951C72BFBB00859CFC /* ALView+PureLayout.h */,
+				091C48961C72BFBB00859CFC /* ALView+PureLayout.m */,
+				091C48971C72BFBB00859CFC /* NSArray+PureLayout.h */,
+				091C48981C72BFBB00859CFC /* NSArray+PureLayout.m */,
+				091C48991C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.h */,
+				091C489A1C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.m */,
+				091C489B1C72BFBB00859CFC /* PureLayout.h */,
+				091C489C1C72BFBB00859CFC /* PureLayout+Internal.h */,
+				091C489D1C72BFBB00859CFC /* PureLayoutDefines.h */,
+			);
+			name = PureLayout;
+			sourceTree = "<group>";
+		};
+		091E76FC1C7309C200FFDF72 /* Custom Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				091E77001C730A1400FFDF72 /* CustomPresentationFirstViewController.h */,
+				091E77011C730A1400FFDF72 /* CustomPresentationFirstViewController.m */,
+				091E77031C730A2100FFDF72 /* CustomPresentationSecondViewController.h */,
+				091E77041C730A2100FFDF72 /* CustomPresentationSecondViewController.m */,
+				091E77061C730A4300FFDF72 /* CustomPresentationController.h */,
+				091E77071C730A4300FFDF72 /* CustomPresentationController.m */,
+				09495FDA1C741229001CAEC8 /* AAPLCustomPresentationController.h */,
+				09495FDB1C741229001CAEC8 /* AAPLCustomPresentationController.m */,
+			);
+			name = "Custom Presentation";
+			sourceTree = "<group>";
+		};
+		09BF0DF51C72CB6B00CF5300 /* CrossDissolve */ = {
+			isa = PBXGroup;
+			children = (
+				09BF0DE91C72C37500CF5300 /* CrossDissolveFirstViewController.h */,
+				09BF0DEA1C72C37500CF5300 /* CrossDissolveFirstViewController.m */,
+				09BF0DEC1C72C38300CF5300 /* CrossDissolveSecondViewController.h */,
+				09BF0DED1C72C38300CF5300 /* CrossDissolveSecondViewController.m */,
+				09BF0DF21C72C78B00CF5300 /* CrossDissolveTransitionAnimator.h */,
+				09BF0DF31C72C78B00CF5300 /* CrossDissolveTransitionAnimator.m */,
+			);
+			name = CrossDissolve;
+			sourceTree = "<group>";
+		};
+		09BF0E001C72CCF000CF5300 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				09BF0DF71C72CCC600CF5300 /* SwipeFirstViewController.h */,
+				09BF0DF81C72CCC600CF5300 /* SwipeFirstViewController.m */,
+				09BF0DFA1C72CCD500CF5300 /* SwipeSecondViewController.h */,
+				09BF0DFB1C72CCD500CF5300 /* SwipeSecondViewController.m */,
+				09BF0DFD1C72CCE900CF5300 /* SwipeAnimator.h */,
+				09BF0DFE1C72CCE900CF5300 /* SwipeAnimator.m */,
+				09BF0E011C72CD8D00CF5300 /* SwipeTransitionDelegate.h */,
+				09BF0E021C72CD8D00CF5300 /* SwipeTransitionDelegate.m */,
+				09BF0E041C72CDBD00CF5300 /* SwipeTransitionInteractionController.h */,
+				09BF0E051C72CDBD00CF5300 /* SwipeTransitionInteractionController.m */,
+			);
+			name = Swipe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,8 +263,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				091E77051C730A2100FFDF72 /* CustomPresentationSecondViewController.m in Sources */,
+				091E77021C730A1400FFDF72 /* CustomPresentationFirstViewController.m in Sources */,
+				09BF0E031C72CD8D00CF5300 /* SwipeTransitionDelegate.m in Sources */,
+				09BF0DF91C72CCC600CF5300 /* SwipeFirstViewController.m in Sources */,
+				09BF0DFC1C72CCD500CF5300 /* SwipeSecondViewController.m in Sources */,
+				091C489F1C72BFBB00859CFC /* NSArray+PureLayout.m in Sources */,
+				091C48A01C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.m in Sources */,
+				091C48A31C72BFCE00859CFC /* MainTableViewController.m in Sources */,
 				091C48881C72BF8900859CFC /* AppDelegate.m in Sources */,
+				09BF0DEE1C72C38300CF5300 /* CrossDissolveSecondViewController.m in Sources */,
+				091E77081C730A4300FFDF72 /* CustomPresentationController.m in Sources */,
+				09BF0DF11C72C50D00CF5300 /* MainNavigationController.m in Sources */,
+				09BF0E061C72CDBD00CF5300 /* SwipeTransitionInteractionController.m in Sources */,
+				09BF0DFF1C72CCE900CF5300 /* SwipeAnimator.m in Sources */,
+				09495FDC1C741229001CAEC8 /* AAPLCustomPresentationController.m in Sources */,
+				091C489E1C72BFBB00859CFC /* ALView+PureLayout.m in Sources */,
+				09BF0DEB1C72C37500CF5300 /* CrossDissolveFirstViewController.m in Sources */,
 				091C48851C72BF8900859CFC /* main.m in Sources */,
+				09BF0DF41C72C78B00CF5300 /* CrossDissolveTransitionAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +420,7 @@
 				091C48931C72BF8900859CFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

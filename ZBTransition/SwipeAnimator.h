@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
-@interface SwipeAnimator : NSObject
+@interface SwipeAnimator : NSObject <UIViewControllerAnimatedTransitioning>
+
+- (instancetype)initWithTargetEdge:(UIRectEdge)targetEdge;
+@property (nonatomic, readwrite) UIRectEdge targetEdge;
 
 @end

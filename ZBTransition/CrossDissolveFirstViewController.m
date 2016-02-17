@@ -7,8 +7,11 @@
 //
 
 #import "CrossDissolveFirstViewController.h"
+#import "CrossDissolveSecondViewController.h"
+#import "CrossDissolveTransitionAnimator.h"
+#import "PureLayout.h"
 
-@interface CrossDissolveFirstViewController ()
+@interface CrossDissolveFirstViewController () <UIViewControllerTransitioningDelegate>
 
 @end
 
@@ -17,6 +20,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:1 alpha:1];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:button];
+    
+    [button setTitle:@"Present With Custom Transition" forState:UIControlStateNormal];
+    [button autoCenterInSuperview];
+    
+    [button addTarget:self action:@selector(buttonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)buttonDidClicked:(id)sender
+{
+    CrossDissolveSecondViewController *vc = [[CrossDissolveSecondViewController alloc] init];
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
+    navc.modalPresentationStyle = UIModalPresentationFullScreen;
+    navc.transitioningDelegate = self;
+    [self presentViewController:navc animated:YES completion:NULL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,6 +46,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - 
+#pragma mark UIViewControllerTransitioningDelegate
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [CrossDissolveTransitionAnimator new];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [CrossDissolveTransitionAnimator new];
+}
 /*
 #pragma mark - Navigation
 

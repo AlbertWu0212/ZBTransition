@@ -7,9 +7,15 @@
 //
 
 #import "MainTableViewController.h"
+#import "CrossDissolveFirstViewController.h"
+#import "SwipeFirstViewController.h"
+#import "MainNavigationController.h"
+#import "CustomPresentationFirstViewController.h"
+
+static NSString * const CELL_IDENTIFIER = @"cell";
 
 @interface MainTableViewController ()
-
+@property (nonatomic, strong) NSArray *dataSource;
 @end
 
 @implementation MainTableViewController
@@ -17,11 +23,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.title = @"CustomTransition";
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.tableFooterView = [UIView new];
+    
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
+    
+    [self setupDataSource];
+}
+
+- (void)setupDataSource
+{
+    NSMutableArray *tempArray = [NSMutableArray array];
+    NSDictionary *dic1 = @{@"title":@"Cross Dissolve",
+                          @"subTitle":@"A cross dissolve transition"};
+    [tempArray addObject:dic1];
+    
+    NSDictionary *dic2 = @{@"title":@"Swipe",
+                           @"subTitle":@"An interactive transition"};
+    [tempArray addObject:dic2];
+    
+    NSDictionary *dic3 = @{@"title":@"Custom Presentation",
+                           @"subTitle":@"Using a presentation controller"};
+    [tempArray addObject:dic3];
+    
+    self.dataSource = [NSArray arrayWithArray:tempArray];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,25 +59,76 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.dataSource count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
+    NSDictionary *dic = [self.dataSource objectAtIndex:indexPath.row];
+    
+    UITableViewCell *cell = nil;
     // Configure the cell...
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL_IDENTIFIER];
+    }
+    cell.textLabel.text = dic[@"title"];
+    cell.detailTextLabel.text = dic[@"subTitle"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
-*/
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSInteger row = indexPath.row;
+    NSDictionary *dic = [self.dataSource objectAtIndex:row];
+    
+    if (row == 0) {
+        CrossDissolveFirstViewController *vc = [[CrossDissolveFirstViewController alloc] init];
+        vc.title = dic[@"title"];
+        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
+                                                                               style:UIBarButtonItemStylePlain
+                                                                              target:self action:@selector(dismiss)];
+        MainNavigationController *navc = [[MainNavigationController alloc] initWithRootViewController:vc];
+        [self.navigationController presentViewController:navc animated:YES completion:nil];
+    }
+    
+    if (row == 1) {
+        SwipeFirstViewController *vc = [[SwipeFirstViewController alloc] init];
+        vc.title = dic[@"title"];
+        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
+                                                                               style:UIBarButtonItemStylePlain
+                                                                              target:self action:@selector(dismiss)];
+        MainNavigationController *navc = [[MainNavigationController alloc] initWithRootViewController:vc];
+        [self.navigationController presentViewController:navc animated:YES completion:nil];
+    }
+    
+    if (row == 2) {
+        CustomPresentationFirstViewController *vc = [[CustomPresentationFirstViewController alloc] init];
+        vc.title = dic[@"title"];
+        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
+                                                                               style:UIBarButtonItemStylePlain
+                                                                              target:self action:@selector(dismiss)];
+        MainNavigationController *navc = [[MainNavigationController alloc] initWithRootViewController:vc];
+        [self.navigationController presentViewController:navc animated:YES completion:nil];
+    }
+}
+
+- (void)dismiss
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

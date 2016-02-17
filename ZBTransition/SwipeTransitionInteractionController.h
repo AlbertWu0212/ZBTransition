@@ -10,4 +10,9 @@
 
 @interface SwipeTransitionInteractionController : UIPercentDrivenInteractiveTransition
 
+- (instancetype)initWithGestureRecognizer:(UIScreenEdgePanGestureRecognizer *)gestureRecognizer
+                          edgeForDragging:(UIRectEdge)edge NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
+
 @end
