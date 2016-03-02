@@ -27,6 +27,10 @@
 		09BF0DFF1C72CCE900CF5300 /* SwipeAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0DFE1C72CCE900CF5300 /* SwipeAnimator.m */; };
 		09BF0E031C72CD8D00CF5300 /* SwipeTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0E021C72CD8D00CF5300 /* SwipeTransitionDelegate.m */; };
 		09BF0E061C72CDBD00CF5300 /* SwipeTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BF0E051C72CDBD00CF5300 /* SwipeTransitionInteractionController.m */; };
+		09CE44981C74824800A5489B /* WDJYLFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE44971C74824800A5489B /* WDJYLFirstViewController.m */; };
+		09CE449B1C74825400A5489B /* WDJYLSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE449A1C74825400A5489B /* WDJYLSecondViewController.m */; };
+		09CE449E1C74827A00A5489B /* WDJYLAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE449D1C74827A00A5489B /* WDJYLAnimator.m */; };
+		09CE44A21C7496B000A5489B /* WDJYLDismissAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CE44A11C7496B000A5489B /* WDJYLDismissAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,14 @@
 		09BF0E021C72CD8D00CF5300 /* SwipeTransitionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeTransitionDelegate.m; sourceTree = "<group>"; };
 		09BF0E041C72CDBD00CF5300 /* SwipeTransitionInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeTransitionInteractionController.h; sourceTree = "<group>"; };
 		09BF0E051C72CDBD00CF5300 /* SwipeTransitionInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeTransitionInteractionController.m; sourceTree = "<group>"; };
+		09CE44961C74824800A5489B /* WDJYLFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDJYLFirstViewController.h; sourceTree = "<group>"; };
+		09CE44971C74824800A5489B /* WDJYLFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDJYLFirstViewController.m; sourceTree = "<group>"; };
+		09CE44991C74825400A5489B /* WDJYLSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDJYLSecondViewController.h; sourceTree = "<group>"; };
+		09CE449A1C74825400A5489B /* WDJYLSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDJYLSecondViewController.m; sourceTree = "<group>"; };
+		09CE449C1C74827A00A5489B /* WDJYLAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDJYLAnimator.h; sourceTree = "<group>"; };
+		09CE449D1C74827A00A5489B /* WDJYLAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDJYLAnimator.m; sourceTree = "<group>"; };
+		09CE44A01C7496B000A5489B /* WDJYLDismissAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WDJYLDismissAnimator.h; sourceTree = "<group>"; };
+		09CE44A11C7496B000A5489B /* WDJYLDismissAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WDJYLDismissAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +121,7 @@
 				091C48871C72BF8900859CFC /* AppDelegate.m */,
 				091C48A11C72BFCE00859CFC /* MainTableViewController.h */,
 				091C48A21C72BFCE00859CFC /* MainTableViewController.m */,
+				09CE449F1C74828100A5489B /* WDJYL */,
 				091E76FC1C7309C200FFDF72 /* Custom Presentation */,
 				09BF0E001C72CCF000CF5300 /* Swipe */,
 				09BF0DF51C72CB6B00CF5300 /* CrossDissolve */,
@@ -189,6 +202,21 @@
 			name = Swipe;
 			sourceTree = "<group>";
 		};
+		09CE449F1C74828100A5489B /* WDJYL */ = {
+			isa = PBXGroup;
+			children = (
+				09CE44961C74824800A5489B /* WDJYLFirstViewController.h */,
+				09CE44971C74824800A5489B /* WDJYLFirstViewController.m */,
+				09CE44991C74825400A5489B /* WDJYLSecondViewController.h */,
+				09CE449A1C74825400A5489B /* WDJYLSecondViewController.m */,
+				09CE449C1C74827A00A5489B /* WDJYLAnimator.h */,
+				09CE449D1C74827A00A5489B /* WDJYLAnimator.m */,
+				09CE44A01C7496B000A5489B /* WDJYLDismissAnimator.h */,
+				09CE44A11C7496B000A5489B /* WDJYLDismissAnimator.m */,
+			);
+			name = WDJYL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,20 +289,24 @@
 				091E77051C730A2100FFDF72 /* CustomPresentationSecondViewController.m in Sources */,
 				091E77021C730A1400FFDF72 /* CustomPresentationFirstViewController.m in Sources */,
 				09BF0E031C72CD8D00CF5300 /* SwipeTransitionDelegate.m in Sources */,
+				09CE449E1C74827A00A5489B /* WDJYLAnimator.m in Sources */,
 				09BF0DF91C72CCC600CF5300 /* SwipeFirstViewController.m in Sources */,
 				09BF0DFC1C72CCD500CF5300 /* SwipeSecondViewController.m in Sources */,
 				091C489F1C72BFBB00859CFC /* NSArray+PureLayout.m in Sources */,
 				091C48A01C72BFBB00859CFC /* NSLayoutConstraint+PureLayout.m in Sources */,
+				09CE449B1C74825400A5489B /* WDJYLSecondViewController.m in Sources */,
 				091C48A31C72BFCE00859CFC /* MainTableViewController.m in Sources */,
 				091C48881C72BF8900859CFC /* AppDelegate.m in Sources */,
 				09BF0DEE1C72C38300CF5300 /* CrossDissolveSecondViewController.m in Sources */,
 				091E77081C730A4300FFDF72 /* CustomPresentationController.m in Sources */,
 				09BF0E061C72CDBD00CF5300 /* SwipeTransitionInteractionController.m in Sources */,
+				09CE44981C74824800A5489B /* WDJYLFirstViewController.m in Sources */,
 				09BF0DFF1C72CCE900CF5300 /* SwipeAnimator.m in Sources */,
 				09495FDC1C741229001CAEC8 /* AAPLCustomPresentationController.m in Sources */,
 				091C489E1C72BFBB00859CFC /* ALView+PureLayout.m in Sources */,
 				09BF0DEB1C72C37500CF5300 /* CrossDissolveFirstViewController.m in Sources */,
 				091C48851C72BF8900859CFC /* main.m in Sources */,
+				09CE44A21C7496B000A5489B /* WDJYLDismissAnimator.m in Sources */,
 				09BF0DF41C72C78B00CF5300 /* CrossDissolveTransitionAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

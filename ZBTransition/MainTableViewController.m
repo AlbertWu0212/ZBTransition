@@ -10,6 +10,7 @@
 #import "CrossDissolveFirstViewController.h"
 #import "SwipeFirstViewController.h"
 #import "CustomPresentationFirstViewController.h"
+#import "WDJYLFirstViewController.h"
 
 static NSString * const CELL_IDENTIFIER = @"cell";
 static NSString * const KEY_TITLE       = @"title";
@@ -51,6 +52,11 @@ static NSString * const KEY_CLASSNAME   = @"className";
                            KEY_SUBTITLE:@"Using a presentation controller",
                            KEY_CLASSNAME:NSStringFromClass([CustomPresentationFirstViewController class])};
     [tempArray addObject:dic3];
+    
+    NSDictionary *dic4 = @{KEY_TITLE:@"豌豆荚",
+                           KEY_SUBTITLE:@"豌豆荚一览的动画效果",
+                           KEY_CLASSNAME:NSStringFromClass([WDJYLFirstViewController class])};
+    [tempArray addObject:dic4];
     
     self.dataSource = [NSArray arrayWithArray:tempArray];
     [self.tableView reloadData];
@@ -104,8 +110,10 @@ static NSString * const KEY_CLASSNAME   = @"className";
     if (class) {
         UIViewController *vc = class.new;
         vc.title = dic[KEY_TITLE];
-        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain
-                                                                              target:self action:@selector(dismiss)];
+        vc.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu"
+                                                                               style:UIBarButtonItemStylePlain
+                                                                              target:self
+                                                                              action:@selector(dismiss)];
         UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
         [self.navigationController presentViewController:navc animated:YES completion:NULL];
     }
