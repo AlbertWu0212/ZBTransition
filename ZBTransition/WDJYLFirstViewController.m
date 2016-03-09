@@ -36,7 +36,7 @@
 {
     WDJYLSecondViewController *vc = [[WDJYLSecondViewController alloc] init];
     UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:vc];
-    navc.modalPresentationStyle = UIModalPresentationCustom;
+    navc.modalPresentationStyle = UIModalPresentationFullScreen;
     navc.transitioningDelegate = self;
     [self presentViewController:navc animated:YES completion:NULL];
 }
